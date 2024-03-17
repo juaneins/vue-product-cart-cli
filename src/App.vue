@@ -1,20 +1,25 @@
 <script setup>
-import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'
+import { RouterLink, RouterView } from 'vue-router';
 </script>
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-      </nav>
-    </div>
+  <header class="top-bar spread">
+    <nav class="top-bar-nav">
+      <RouterLink to="/" class="top-bar-link">
+        <i class="icofont-spoon-and-fork"></i>
+        <span>Home</span>
+      </RouterLink>
+      <RouterLink to="/products" class="top-bar-link">
+        <span>Products</span>
+      </RouterLink>
+      <RouterLink to="/past-orders" class="top-bar-link">
+        <span>Past Orders</span>
+      </RouterLink>
+    </nav>
+    <!-- <RouterLink @click="toggleSidebar" class="top-bar-cart-link">
+      <i class="icofont-cart-alt icofont-1x"></i>
+      <span>Cart ({{ totalQuantity }})</span>
+    </RouterLink> -->
   </header>
 
   <RouterView />
